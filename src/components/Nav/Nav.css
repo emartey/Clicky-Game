@@ -1,0 +1,31 @@
+ul.navList {
+    display: flex;
+    justify-content: space-around;
+    font-size: calc(10px + 14 * (100vw - 320px)/ 800);
+}
+
+.correct {
+    animation: growCorrect 0.5s;
+    animation-iteration-count: 1;
+}
+
+.incorrect {
+    animation: growIncorrect 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes growCorrect {
+    0% {transform: scale(1); color: white; }
+    25% {transform: scale(1.5) }
+    50% {transform: scale(1.75); color: #004d40; }
+    50% {transform: scale(1.5) }
+    100% {transform: scale(1); color: white; }
+}
+
+@keyframes growIncorrect {
+    0% {transform: scale(1); color: white; }
+    25% {transform: scale(1.5) }
+    50% {transform: scale(1.75); color: #b71c1c; }
+    50% {transform: scale(1.5) }
+    100% {transform: scale(1); color: white; }
+}
